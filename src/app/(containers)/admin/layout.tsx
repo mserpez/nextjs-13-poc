@@ -1,5 +1,7 @@
 // DEMO: Admin Layout
 
+import AdminTopbar from "@/app/components/admin-topbar";
+import { AuthGuard } from "@/app/guards";
 import Link from "next/link";
 
 /*
@@ -12,19 +14,24 @@ import Link from "next/link";
  */
 export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
-    <div className="flex flex-row min-h-screen">
-      <div className="bg-gray-600 min-h-full w-1/5 p-4">
-        <div className="mb-8">
-          <Link href="/admin">Admin</Link>
-        </div>
-        <div className="mb-8">
-          <Link href="/">Web</Link>
-        </div>
-        <div className="mb-8">
-          <Link href="/admin/users">Users</Link>
+    <AuthGuard>
+      <div className="flex h-screen flex-col">
+        <AdminTopbar />
+        <div className="flex h-full">
+          <div className="bg-gray-950 h-full w-1/5 p-4">
+            <div className="mb-8 text-white">
+              <Link href="/admin/users">Users</Link>
+            </div>
+            <div className="mb-8 text-white">
+              <Link href="/admin/section-1">Sec 1 (Admin & Lv 0)</Link>
+            </div>
+            <div className="mb-8 text-white">
+              <Link href="/admin/section-2">Sec 2 (Admin & Lv 1)</Link>
+            </div>
+          </div>
+          <div className="h-full w-4/5">{children}</div>
         </div>
       </div>
-      <div className="min-h-full w-4/5">{children}</div>
-    </div>
+    </AuthGuard>
   );
 }
