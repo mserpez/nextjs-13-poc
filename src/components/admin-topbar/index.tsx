@@ -1,7 +1,7 @@
 "use client";
 
-import { PAGE_PATHS } from "@/app/constants";
-import { useAuth } from "@/app/hooks";
+import { PAGE_PATHS } from "@/constants";
+import { useAuth } from "@/hooks";
 import Link from "next/link";
 
 export default function AdminTopbar() {

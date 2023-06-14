@@ -1,4 +1,4 @@
-import TopBar from "@/app/components/topbar";
+import TopBar from "@/components/topbar";
 
 export default function PageLayout({ children }: React.PropsWithChildren) {
   return (

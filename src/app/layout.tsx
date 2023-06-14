@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
+import Providers from "../providers";
 import "./globals.css";
-import Providers from "./providers";
 
 // DEMO: Font family
 const inter = Inter({ subsets: ["latin"], weight: ["300", "500", "700"] });

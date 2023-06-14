@@ -1,5 +1,5 @@
-import { RoleGuard } from "@/app/guards";
-import { AuthRoleType } from "@/app/providers/auth/types";
+import { RoleGuard } from "@/guards";
+import { AuthRoleType } from "@/providers/auth/types";
 
 export default function Page() {
   return (

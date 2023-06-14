@@ -2,8 +2,6 @@
 
 const colors = require('tailwindcss/colors')
 
-
-
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -12,9 +10,7 @@ module.exports = {
   ],
   theme: {
     colors: {
-      'primary': {
-        DEFAULT: colors.sky['600'],
-      },
+      primary: 'var(--primary)',
       ...colors,
     }
   },

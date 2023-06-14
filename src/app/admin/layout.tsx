@@ -1,7 +1,7 @@
 // DEMO: Admin Layout
 
-import AdminTopbar from "@/app/components/admin-topbar";
-import { AuthGuard } from "@/app/guards";
+import AdminTopbar from "@/components/admin-topbar";
+import { AuthGuard } from "@/guards";
 import Link from "next/link";
 
 /*
