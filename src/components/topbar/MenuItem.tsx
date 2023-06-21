@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-interface MenuItemProps {
+export interface MenuItemProps {
   name: string;
   path?: string;
   action?: () => void;

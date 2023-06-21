@@ -1,0 +1,13 @@
+- Server and client components. Render/hydrate.
+- Rutas y rutas dinámicas
+- Data fetching / Cache / use / Suspense / fallbacks
+- Layouts
+- Auth contex
+- Permisos por rol y nivel
+- Forms
+- Tipografia
+- Icons
+- Barer files
+- Storybook
+- Configuración de tema
+- Componentes base con styled

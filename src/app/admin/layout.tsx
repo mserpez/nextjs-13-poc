@@ -1,6 +1,6 @@
 // DEMO: Admin Layout
 
-import AdminTopbar from "@/components/admin-topbar";
+import { TopBar } from "@/components";
 import { AuthGuard } from "@/guards";
 import Link from "next/link";
 
@@ -16,7 +16,7 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
     <AuthGuard>
       <div className="flex h-screen flex-col">
-        <AdminTopbar />
+        <TopBar showLogoutItem appName="ADMIN" />
         <div className="flex h-full">
           <div className="bg-gray-950 h-full w-1/5 p-4">
             <div className="mb-8 text-white">

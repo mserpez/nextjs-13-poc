@@ -5,3 +5,7 @@
 :root {
   --primary: theme("colors.sky.600");
 }
+
+input {
+  outline: none;
+}

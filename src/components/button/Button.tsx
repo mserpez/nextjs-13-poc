@@ -1,10 +1,14 @@
+"use client";
+
 import { styled } from "styled-components";
 
-interface ButtonProps {
+interface ButtonProps extends React.PropsWithChildren {
   variant?: "contained" | "outlined" | "text";
   size?: "small" | "medium" | "large";
-  label: string;
+  label?: string;
   onClick?: () => void;
+  type?: "button" | "submit" | "reset";
+  className?: string;
 }
 
 const BaseButton = styled.button<Partial<ButtonProps>>`
@@ -14,6 +18,7 @@ const BaseButton = styled.button<Partial<ButtonProps>>`
   cursor: pointer;
   display: inline-block;
   line-height: 1;
+  margin-top: 8px;
 `;
 
 const SizedButton = styled(BaseButton)<{ size: ButtonProps["size"] }>`
@@ -62,16 +67,25 @@ const VariantButton = styled(SizedButton)<{ variant: ButtonProps["variant"] }>`
 `;
 
 export default function Button(props: ButtonProps) {
-  const { variant = "contained", size = "medium", label, onClick } = props;
+  const {
+    children,
+    variant = "contained",
+    size = "medium",
+    type = "button",
+    label,
+    className,
+    onClick,
+  } = props;
 
   return (
     <VariantButton
       onClick={onClick}
-      type="button"
+      type={type}
       variant={variant}
       size={size}
+      className={className}
     >
-      {label}
+      {label || children}
     </VariantButton>
   );
 }

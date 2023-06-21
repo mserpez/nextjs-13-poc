@@ -10,12 +10,14 @@ export default function AuthGuard({ children }: React.PropsWithChildren) {
   const { replace } = useRouter();
 
   useEffect(() => {
+    if (!isInitialized) return;
+
     if (isAuthenticated) {
       console.log("User", user);
     } else {
       replace(PAGE_PATHS.HOME);
     }
-  }, [isAuthenticated, replace, user]);
+  }, [isAuthenticated, isInitialized, replace, user]);
 
   if (!isInitialized) return null;
 
