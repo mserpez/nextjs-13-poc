@@ -1,6 +1,6 @@
 import { Icon } from "@/components";
-import { RoleGuard } from "@/guards";
-import { AuthRoleType } from "@/providers/auth/types";
+import { RoleGuard } from "@/core/guards";
+import { AuthRoleType } from "@/core/providers/auth/types";
 
 export default function Page() {
   return (

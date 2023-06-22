@@ -1,9 +1,9 @@
 "use client";
 
+import { PAGE_PATHS } from "@/config";
+import { useAuth } from "@/core/hooks";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-import { PAGE_PATHS } from "../constants";
-import { useAuth } from "../hooks";
 
 export default function AuthGuard({ children }: React.PropsWithChildren) {
   const { isAuthenticated, isInitialized, user } = useAuth();

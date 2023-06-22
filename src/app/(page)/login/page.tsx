@@ -1,10 +1,10 @@
 "use client";
-import { GestGuard } from "@/guards";
-import { useAuth } from "@/hooks";
-import { AuthRoleType } from "@/providers/auth/types";
+import { GestGuard } from "@/core/guards";
+import { useAuth } from "@/core/hooks";
+import { AuthRoleType } from "@/core/providers/auth/types";
 
 export default function Page() {
-  const { login } = useAuth();
+  const { login, user } = useAuth();
 
   return (
     <GestGuard>

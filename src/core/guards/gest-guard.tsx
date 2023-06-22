@@ -1,8 +1,8 @@
 "use client";
 
+import { PAGE_PATHS } from "@/config";
+import { useAuth } from "@/core/hooks";
 import { useEffect } from "react";
-import { PAGE_PATHS } from "../constants";
-import { useAuth } from "../hooks";
 
 export default function GestGuard({ children }: React.PropsWithChildren) {
   const { isAuthenticated, isInitialized } = useAuth();

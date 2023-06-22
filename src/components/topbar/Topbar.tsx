@@ -1,7 +1,7 @@
 "use client";
 
-import { PAGE_PATHS } from "@/constants";
-import { useAuth } from "@/hooks";
+import { PAGE_PATHS } from "@/config";
+import { useAuth } from "@/core/hooks";
 import MenuItem, { MenuItemProps } from "./MenuItem";
 
 interface TopBarItemsProps extends MenuItemProps {

@@ -15,7 +15,7 @@ export default async function Page() {
   return (
     <div className="flex items-center justify-center p-24">
       {data.map((user) => (
-        <div className="m-2 w-96" key={user.id}>
+        <div className="m-2" key={user.id}>
           <Link href={`/admin/users/${user.id}`} className="text-sm">
             {user.username}
             <Image

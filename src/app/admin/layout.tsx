@@ -1,7 +1,8 @@
 // DEMO: Admin Layout
 
 import { TopBar } from "@/components";
-import { AuthGuard } from "@/guards";
+import { PAGE_PATHS } from "@/config";
+import { AuthGuard } from "@/core/guards";
 import Link from "next/link";
 
 /*
@@ -16,7 +17,11 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
     <AuthGuard>
       <div className="flex h-screen flex-col">
-        <TopBar showLogoutItem appName="ADMIN" />
+        <TopBar
+          showLogoutItem
+          appName="ADMIN"
+          items={[{ name: "Web", path: PAGE_PATHS.HOME }]}
+        />
         <div className="flex h-full">
           <div className="bg-gray-950 h-full w-1/5 p-4">
             <div className="mb-8 text-white">

@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import Providers from "../providers";
+import Providers from "../core/providers";
 import "./globals.css";
 
 // DEMO: Font family

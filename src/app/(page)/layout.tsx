@@ -1,5 +1,5 @@
 import { TopBar } from "@/components";
-import { PAGE_PATHS } from "@/constants";
+import { PAGE_PATHS } from "@/config";
 
 export default function PageLayout({ children }: React.PropsWithChildren) {
   return (

@@ -1,8 +1,8 @@
 "use client";
 
 import { Icon } from "@/components";
-import { useAuth } from "../hooks";
-import { AuthRoleType } from "../providers/auth/types";
+import { useAuth } from "@/core/hooks";
+import { AuthRoleType } from "@/core/providers/auth/types";
 
 interface RoleGuardProps extends React.PropsWithChildren {
   authRoleType: AuthRoleType | AuthRoleType[];
